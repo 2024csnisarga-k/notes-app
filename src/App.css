@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  transition: 0.3s;
+}
+
+.app.light {
+  background: #f4f4f4;
+  color: #222;
+}
+
+.app.dark {
+  background: #222;
+  color: white;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.dark .container {
+  background: #333;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-btn {
+  background: #555;
+  color: white;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.input-section input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.dark .input-section input {
+  background: #444;
+  color: white;
+  border-color: #666;
+}
+
+.add-btn {
+  background: #007bff;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #0056b3;
+}
+
+.container h2 {
+  margin-bottom: 15px;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 7px;
+  background: #eee;
+  color: #222;
+  overflow-wrap: anywhere;
+}
+
+.note-item.dark {
+  background: #444;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #b02a37;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
+
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+}
